@@ -1,7 +1,11 @@
 import pygame
 import json
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 pygame.init()
-win=pygame.display.set_mode((1400,700))
+width = pygame.display.Info().current_w
+height = pygame.display.Info().current_h
+win=pygame.display.set_mode((width,height))
 blocknum=0#should be factor of 90
 eqcheckindex=0
 done=False
